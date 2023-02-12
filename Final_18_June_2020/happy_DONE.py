@@ -93,6 +93,8 @@ def happy_sequences(first, rest):
 
 def is_happy_all_possibilities(li):
     all_l = list(permutations(li))
+    res_l = []
     for j in all_l:
         if is_happy(list(j)):
-            return j
+            res_l.append(j)
+    return res_l
